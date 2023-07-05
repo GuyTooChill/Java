@@ -1,4 +1,5 @@
 import java.util.Date;
+
 public class AlfredQuotes {
     
     public String basicGreeting() {
@@ -7,18 +8,16 @@ public class AlfredQuotes {
     }
     
     public String guestGreeting(String name) {
-        // YOUR CODE HERE
-        return "placeholder for guest greeting return string";
+        return "Hello, " + name;
     }
     
     public String dateAnnouncement() {
-        // YOUR CODE HERE
-        return "placeholder for date announcement return string";
+        Date date = new Date();
+        return "Current date is: " + date;
     }
     
     public String respondBeforeAlexis(String conversation) {
-        // YOUR CODE HERE
-        return "for snarky response return string";
+        return conversation;
     }
     
 	// NINJA BONUS
