@@ -13,7 +13,7 @@ public class BankAccount {
     public BankAccount(){
         this.checkingBalance = 0.0;
         this.savingsBalance = 0.0;
-        this.totalMoney = this.checkingBalance + this.savingsBalance;
+        this.totalMoney = 0.0;
         accounts++;
     }
 
@@ -36,13 +36,12 @@ public class BankAccount {
     }
 
     public static int getAccounts(){
-        return this.accounts;
+        return accounts;
     }
 
     public static double getTotalMoney(){
-        return this.totalMoney;
+        return totalMoney;
     }
-
 
     // METHODS
     // deposit
@@ -57,27 +56,27 @@ public class BankAccount {
     public void displayAccount(){
         System.out.println("Current Checking Balance: " + this.checkingBalance);
         System.out.println("Current Savings Balance: " + this.savingsBalance);
+        System.out.println("Current Total Money: " + this.totalMoney);
     }
 
     public void checkingsDeposit(int amount){
-        this.setCheckingBalance += amount;
-        this.setTotalMoney;
+        this.checkingBalance += amount;
+        this.totalMoney += amount;
     }
 
     public void checkingsWithdraw(int amount){
-        this.setSavingsBalance -= amount;
-        this.setTotalMoney;
+        this.checkingBalance -= amount;
+        this.totalMoney -= amount;
     }
 
     public void savingsDeposit(int amount){
-        this.setSavingsBalance += amount;
-        this.setTotalMoney;
+        this.savingsBalance += amount;
+        this.totalMoney += amount;
     }
 
-
     public void savingsWithdraw(int amount){
-        this.setSavingsBalance -= amount;
-        this.setTotalMoney;
+        this.savingsBalance -= amount;
+        this.totalMoney -= amount;
     }
 
 }
